@@ -139,14 +139,14 @@ export default function Home() {
   <div className="grid md:grid-cols-2 gap-10">
 
     {[
-      { name: "Python", level: "90%" },
-      { name: "C++", level: "80%" },
-      { name: "Java", level: "75%" },
-      { name: "Machine Learning", level: "85%" },
-      { name: "FastAPI", level: "85%" },
-      { name: "TensorFlow", level: "80%" },
-      { name: "Pandas", level: "85%" },
-      { name: "NumPy", level: "85%" },
+      { name: "Python", level: "80%" },
+      { name: "C++", level: "65%" },
+      { name: "Java", level: "80%" },
+      { name: "Machine Learning", level: "80%" },
+      { name: "FastAPI", level: "75%" },
+      { name: "TensorFlow", level: "70%" },
+      { name: "Pandas", level: "75%" },
+      { name: "NumPy", level: "70%" },
     ].map((skill, i) => (
 
       <div
