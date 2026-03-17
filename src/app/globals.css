@@ -27,3 +27,190 @@ body {
 html {
   scroll-behavior: smooth;
 }
+body {
+  background: radial-gradient(circle at 20% 20%, #1a1a2e, #000000);
+  animation: bgmove 15s infinite alternate;
+}
+
+@keyframes bgmove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+/* Animated Gradient Blobs */
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.5;
+  animation: blobMove 20s infinite alternate;
+}
+
+.blob1 {
+  width: 400px;
+  height: 400px;
+  background: #3b82f6;
+  top: 10%;
+  left: 10%;
+}
+
+.blob2 {
+  width: 400px;
+  height: 400px;
+  background: #8b5cf6;
+  bottom: 10%;
+  right: 10%;
+}
+
+.blob3 {
+  width: 350px;
+  height: 350px;
+  background: #06b6d4;
+  top: 50%;
+  left: 40%;
+}
+
+@keyframes blobMove {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  50% {
+    transform: translate(100px, -50px) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50px, 80px) scale(1);
+  }
+}
+@keyframes drive {
+  0% {
+    transform: translateX(-10%);
+  }
+
+  100% {
+    transform: translateX(110vw);
+  }
+}
+.checkered-bg {
+  background-image:
+    linear-gradient(45deg,#ffffff05 25%,transparent 25%),
+    linear-gradient(-45deg,#ffffff05 25%,transparent 25%),
+    linear-gradient(45deg,transparent 75%,#ffffff05 75%),
+    linear-gradient(-45deg,transparent 75%,#ffffff05 75%);
+  background-size:40px 40px;
+}
+.speed-lines::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 40px,
+    rgba(255,255,255,0.03) 42px
+  );
+  animation: speed 8s linear infinite;
+}
+
+@keyframes speed {
+  from { transform: translateX(0); }
+  to { transform: translateX(-200px); }
+}
+iframe {
+  object-fit: cover;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+/* F1 Racing Track Center Line */
+
+.track-dash {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    white 0px,
+    white 40px,
+    transparent 40px,
+    transparent 80px
+  );
+
+  animation: trackMove 1s linear infinite;
+}
+
+@keyframes trackMove {
+  from {
+    background-position-y: 0;
+  }
+  to {
+    background-position-y: 80px;
+  }
+}
+/* F1 Background for sections */
+
+.f1-section-bg {
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 70%);
+}
+.f1-section-bg {
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 70%);
+  backdrop-filter: blur(3px);
+}
+.f1-track-bg {
+  background-image: url("/track-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.f1-speed-bg {
+  background: #000;
+  position: relative;
+}
+
+.f1-speed-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 2px,
+    transparent 2px,
+    transparent 80px
+  );
+}
+.f1-dashboard-bg {
+  background: radial-gradient(circle at center, #0a0a0a 0%, #000000 80%);
+  position: relative;
+}
+
+.f1-dashboard-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+
+  background-size: 80px 80px;
+
+  opacity: 0.4;
+}
+
+.f1-dashboard-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(
+    circle at top,
+    rgba(255,0,0,0.15),
+    transparent 60%
+  );
+}
+.profile-glow {
+box-shadow: 0 0 40px rgba(255,0,0,0.5);
+}
